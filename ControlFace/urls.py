@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from apif import views
+from apif import views,apiuser
 
 urlpatterns = [
-
+    path('admin/', admin.site.urls),
     path('', views.indexLogin, name='indexLogin'),
     path('control/',views.controlUser, name='controlUser'),
+    path('up/', apiuser.addUser, name='addUser'),
+    path('upload/', apiuser.upload_file, name='upload_file'),
 ]
