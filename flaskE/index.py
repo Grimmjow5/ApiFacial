@@ -6,7 +6,7 @@ from app.routes import simple_page
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'tu_clave_secreta'
-app.config['UPLOAD_FOLDER'] = "uploads"
+app.config['UPLOAD_FOLDER'] = "videos"
 app.register_blueprint(simple_page)
 
 @app.route('/get_csrf_token', methods=['GET'])
