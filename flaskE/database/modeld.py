@@ -8,3 +8,6 @@ class Empleado(Model):
   nempleado = fields.IntField()
   correo = fields.CharField(max_length=60)
   telefono = fields.IntField()
+
+  class Meta:
+    table = "empleados"
